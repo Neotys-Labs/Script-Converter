@@ -1,4 +1,4 @@
-# Script-Converter
+# Script Converter
 Command line tool that converts LoadRunner scripts to a NeoLoad Project.
 
 ## Installation
