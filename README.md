@@ -4,7 +4,7 @@ Command line tool that converts LoadRunner scripts to a NeoLoad Project.
 ## Installation
 
 ### Requirement
-Java 8 or later. ([Download Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html))
+Java 8. ([Download Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html))
 
 ### Procedure
 1. Download the [latest release](https://github.com/Neotys-Labs/Script-Converter/releases/latest)
