@@ -80,7 +80,7 @@ During the LoadRunner Scripts conversion, the tool created two log files in the 
 * **migration_logs/debug.log**: This file contains the debug results. It contains for example the stacktrace of any error encountered.
 
 ## Feedbacks and bugs
-Open [an issue](https://github.com/Neotys-Labs/Script-Converter/issues) or contact [Neotys support](https://www.neotys.com/support/contact.html).
+Open [an issue](https://github.com/Neotys-Labs/Script-Converter/issues) or contact [Neotys support](https://www.neotys.com/support/contact.html), and provide [log files](#logs) and/or LoadRunner scripts.
 
 ## How to contribute
 The source code is not available yet. It will be opened soon to contribution.
