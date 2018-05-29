@@ -25,13 +25,13 @@ The Script Convert allows converting LoadRunner Scripts from a folder previously
 For more information, see the [Coverage](#coverage) section.
 
 ### Executable
-* **Windows**: script-converter.bat  
-* **Linux/OSX**: script-converter.sh
+* **Windows**: `script-converter.bat`
+* **Linux/OSX**: `script-converter.sh`
 
 ### Arguments
 
 Run a command prompt and enter the following line:
--source <LR Scripts folder> -target <NeoLoad output directory> -project <NeoLoad Project name>
+`-source <LR Scripts folder> -target <NeoLoad output directory> -project <NeoLoad Project name>`
 
 * **LR Scripts folder**: The folder including the LoadRunner Scripts to convert.
 * **NeoLoad output directory**: The folder to include all the Loadrunner scripts converted.
@@ -39,11 +39,10 @@ Run a command prompt and enter the following line:
 
 
 ### Examples
-* **Windows**: .\script-converter.bat -source "C:\LoadRunnerScripts" -target "C:\Users\Documents\NeoLoadProjects\LRConversion" -project "LRConversion"
-* **Linux/OSX**: ./script-converter.sh -source "/home/user/LoadRunnerScripts" -target "/home/user/NeoLoadProjects/LRConversion" -project "LRConversion"
+* **Windows**: `.\script-converter.bat -source "C:\LoadRunnerScripts" -target "C:\Users\Documents\NeoLoadProjects\LRConversion" -project "LRConversion"`
+* **Linux/OSX**: `./script-converter.sh -source "/home/user/LoadRunnerScripts" -target "/home/user/NeoLoadProjects/LRConversion" -project "LRConversion"`
 
 ## Coverage
-<a name="Coverage"></a>
 
 Warning: The script Converter only supports Web - HTTP/HTML protocols.
 
