@@ -24,6 +24,8 @@ The Script Convert allows converting LoadRunner Scripts from a folder previously
 
 For more information, see the [Coverage](#coverage) section.
 
+After the script conversion is done, it's recommended to verify the content of the [migration log](#logs) to manually process elements either partially supported, or not supported.  
+
 ### Executable
 * **Windows**: `script-converter.bat`
 * **Linux/OSX**: `script-converter.sh`
@@ -70,6 +72,12 @@ Below is the list of LoadRunner parameters that can be converted into a NeoLoad 
 * logic (conditions and loops)
 * custom C code
 * actions other than in C language (.java, .vba...)
+
+## Logs
+
+During the LoadRunner Scripts conversion, the tool created two log files in the NeoLoad project folder: 
+* **migration_logs/migration.log**: This file contains the migration results. It contains for example the information of all element either partially supported or not supported.
+* **migration_logs/debug.log**: This file contains the debug results. It contains for example the stacktrace of any error encountered.
 
 ## Feedbacks and bugs
 Open [an issue](https://github.com/Neotys-Labs/Script-Converter/issues) or contact [Neotys support](https://www.neotys.com/support/contact.html).
