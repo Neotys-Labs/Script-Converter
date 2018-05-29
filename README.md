@@ -13,19 +13,21 @@ Java 8 or later. ([Download Java](http://www.oracle.com/technetwork/java/javase/
 ## Usage
 
 ### Executable
-
-Windows: scriptconverter.bat   
-Linux/OSX: scriptconverter.sh 
+* Windows: script-converter.bat  
+* Linux/OSX: script-converter.sh
 
 ### Arguments
-TODO
+* source: The source directory of the project to migrate.
+* target: The target folder where the generated project will be written.
+* project: The name of the converted project.
 
-### Example
-TODO
+### Examples
+* Windows: .\script-converter.bat -source "C:\LoadRunnerScripts" -target "C:\Users\Documents\NeoLoadProjects\LRConversion" -project "LRConversion"
+* Linux/OSX: ./script-converter.sh -source "/home/user/LoadRunnerScripts" -target "/home/user/NeoLoadProjects/LRConversion" -project "LRConversion"
 
 ## Coverage
 
-“Web - HTTP/HTML” protocol
+"Web - HTTP/HTML" protocol
 
 ### Converted variables
 * File Parameter
@@ -39,15 +41,15 @@ TODO
 * web_reg_find
 * web_reg_save_param
 * web_url
-* web_submit_form
 * web_submit_data
+* web_custom_request
 
 ### Not Covered
 * other functions
 * logic (conditions and loops)
 * custom C code
 
-## feedbacks and bugs
+## Feedbacks and bugs
 Open [an issue](https://github.com/Neotys-Labs/Script-Converter/issues) or contact [Neotys support](https://www.neotys.com/support/contact.html).
 
 ## How to contribute
