@@ -35,8 +35,8 @@ After the script conversion is done, it's recommended to verify the content of t
 Run a command prompt and enter the following line:
 `-source <LR Scripts folder> -target <NeoLoad output directory> -project <NeoLoad Project name>`
 
-* **LR Scripts folder**: The folder including the LoadRunner Scripts to convert.
-* **NeoLoad output directory**: The folder to include all the Loadrunner scripts converted.
+* **LR Scripts folder**: Source directory where all scripts in each sub-directory will be converted into the output Project.
+* **NeoLoad output directory**: The folder to include all the LoadRunner Scripts converted.
 * **NeoLoad Project name**: The name to assign to the NeoLoad project.
 
 
@@ -80,7 +80,7 @@ During the LoadRunner Scripts conversion, the tool created two log files in the 
 * **migration_logs/debug.log**: This file contains the debug results. It contains for example the stacktrace of any error encountered.
 
 ## Feedbacks and bugs
-Open [an issue](https://github.com/Neotys-Labs/Script-Converter/issues) or contact [Neotys support](https://www.neotys.com/support/contact.html), and provide [log files](#logs) and/or LoadRunner scripts.
+Open [an issue](https://github.com/Neotys-Labs/Script-Converter/issues) or contact [Neotys support](https://www.neotys.com/support/contact.html), and provide [log files](#logs) and/or LoadRunner Scripts.
 
 ## How to contribute
 The source code is not available yet. It will be opened soon to contribution.
