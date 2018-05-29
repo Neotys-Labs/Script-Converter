@@ -22,7 +22,7 @@ The Script Convert allows converting LoadRunner Scripts from a folder previously
 * **supported with a warning**: available in NeoLoad but might not respect the iso standard.
 * **not supported**: cannot be processed by the converter.
 
-For more information, see the Coverage section.
+For more information, see the [Coverage](#coverage) section.
 
 ### Executable
 * **Windows**: script-converter.bat  
@@ -39,10 +39,11 @@ Run a command prompt and enter the following line:
 
 
 ### Examples
-* Windows: .\script-converter.bat -source "C:\LoadRunnerScripts" -target "C:\Users\Documents\NeoLoadProjects\LRConversion" -project "LRConversion"
-* Linux/OSX: ./script-converter.sh -source "/home/user/LoadRunnerScripts" -target "/home/user/NeoLoadProjects/LRConversion" -project "LRConversion"
+* **Windows**: .\script-converter.bat -source "C:\LoadRunnerScripts" -target "C:\Users\Documents\NeoLoadProjects\LRConversion" -project "LRConversion"
+* **Linux/OSX**: ./script-converter.sh -source "/home/user/LoadRunnerScripts" -target "/home/user/NeoLoadProjects/LRConversion" -project "LRConversion"
 
 ## Coverage
+<a name="Coverage"></a>
 
 Warning: The script Converter only supports Web - HTTP/HTML protocols.
 
