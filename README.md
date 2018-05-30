@@ -18,13 +18,13 @@ Java 8 must be installed on the machine used to run the Script Converter. ([Down
 ## Usage
 
 The Script Convert allows converting LoadRunner Scripts from a folder previously created and including all the scripts to be processed. After the conversion process, the Script Converter provides a detailed summary of the events occurred during the process. The actions, functions and parameters processed can have 3 different status:
-* **supported**: compatible with NeoLoad
-* **supported with a warning**: available in NeoLoad but might not respect the iso standard.
-* **not supported**: cannot be processed by the converter.
+* **Supported**: Compatible with NeoLoad
+* **Supported with a warning**: Available in NeoLoad but might not respect the iso standard.
+* **Not supported**: Cannot be processed by the converter.
 
 For more information, see the [Coverage](#coverage) section.
 
-After the script conversion is done, it's recommended to verify the content of the [migration log](#logs) to manually process elements either partially supported, or not supported.  
+After the script conversion is done, it is recommended to verify the content of the [migration log](#logs) to manually process elements either partially supported, or not supported.  
 
 ### Executable
 * **Windows**: `script-converter.bat`
@@ -76,7 +76,7 @@ Below is the list of LoadRunner parameters that can be converted into a NeoLoad 
 ## Logs
 
 During the LoadRunner Scripts conversion, the tool created two log files in the NeoLoad project folder: 
-* **migration_logs/migration.log**: This file contains the migration results. It contains for example the information of all element either partially supported or not supported.
+* **migration_logs/migration.log**: This file contains the migration results. It contains for example the information of all elements either partially supported or not supported.
 * **migration_logs/debug.log**: This file contains the debug results. It contains for example the stacktrace of any error encountered.
 
 ## Feedbacks and bugs
