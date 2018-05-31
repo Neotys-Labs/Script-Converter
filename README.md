@@ -1,10 +1,8 @@
 # Script Converter
 
-The Script Converter makes it possible to convert LoadRunner Scripts into a NeoLoad project.
+The Script Converter is a command line tool that converts LoadRunner Scripts into a NeoLoad project.
 
-The Script Converter can be run as a command line tool.
-
-Warning: The Script Converter is currently in beta version. No official support is provided for the tool. It also might involve in the future and we would really appreciate your feedback on the product. Feel free to contact us at [Neotys support](https://www.neotys.com/support/contact.html).
+Warning: As the Script Converter is currently a preview version, no official support is provided for the tool. We would really appreciate your feedback on the product. Feel free to contact us at [Neotys support](https://www.neotys.com/support/contact.html).
 
 ## Installation
 
@@ -17,9 +15,9 @@ Java 8 must be installed on the machine used to run the Script Converter. ([Down
 
 ## Usage
 
-The Script Convert allows converting LoadRunner Scripts from a folder previously created and including all the scripts to be processed. After the conversion process, the Script Converter provides a detailed summary of the events occurred during the process. The actions, functions and parameters processed can have 3 different status:
+The Script Converter converts LoadRunner Scripts from a folder previously created and including all the scripts to be processed. After the conversion process, the Script Converter creates a NeoLoad Project containing the Virtual User Paths corresponding to each LoadRunner script and provides a detailed summary of the events occurred during the process. The actions, functions and parameters processed can have 3 different status:
 * **Supported**: Compatible with NeoLoad
-* **Supported with a warning**: Available in NeoLoad but might not respect the iso standard.
+* **Supported with a warning**: Available in NeoLoad but some options or arguments are not supported.
 * **Not supported**: Cannot be processed by the converter.
 
 For more information, see the [Coverage](#coverage) section.
@@ -36,13 +34,14 @@ Run a command prompt and enter the following line:
 `-source <LR Scripts folder> -target <NeoLoad output directory> -project <NeoLoad Project name>`
 
 * **LR Scripts folder**: Source directory where all scripts in each sub-directory will be converted into the output Project.
-* **NeoLoad output directory**: The folder to include all the LoadRunner Scripts converted.
+* **NeoLoad output directory**: The folder of the created NeoLoad Project.
 * **NeoLoad Project name**: The name to assign to the NeoLoad project.
 
-
 ### Examples
-* **Windows**: `.\script-converter.bat -source "C:\LoadRunnerScripts" -target "C:\Users\Documents\NeoLoadProjects\LRConversion" -project "LRConversion"`
-* **Linux/OSX**: `./script-converter.sh -source "/home/user/LoadRunnerScripts" -target "/home/user/NeoLoadProjects/LRConversion" -project "LRConversion"`
+* **Windows**:  
+`.\script-converter.bat -source "C:\LoadRunnerScripts\MyAppX" -target "C:\Users\Documents\NeoLoadProjects\MyAppX" -project "MyAppX"`
+* **Linux/OSX**:  
+`./script-converter.sh -source "/home/user/LoadRunnerScripts/MyAppX" -target "/home/user/NeoLoadProjects/MyAppX" -project "MyAppX"`
 
 ## Coverage
 
