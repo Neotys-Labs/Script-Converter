@@ -6,12 +6,13 @@ Warning: As the Script Converter is currently a preview version, no official sup
 
 ## Installation
 
-### Requirement
-Java 8 must be installed on the machine used to run the Script Converter. ([Download Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html)).
+### Download
 
-### Procedure
 1. Download the [latest release](https://github.com/Neotys-Labs/Script-Converter/releases/latest)
 2. Unzip in the folder of your choice
+
+### Requirement
+Java 8 must be installed on the machine used to run the Script Converter. ([Download Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html)).
 
 ## Usage
 
