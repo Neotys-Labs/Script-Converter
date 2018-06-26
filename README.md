@@ -53,6 +53,10 @@ Below is the list of the LoadRunner functions that can be converted into a NeoLo
 * lr_think_time
 * web_reg_find
 * web_reg_save_param
+* web_reg_save_param_ex
+* web_reg_save_param_regexp
+* web_reg_save_param_xpath
+* web_reg_save_param_json
 * web_url
 * web_submit_data
 * web_custom_request
