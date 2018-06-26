@@ -49,17 +49,20 @@ This section lists the LoadRunner functions and parameters covered by the Script
 
 ### Functions
 Below is the list of the LoadRunner functions that can be converted into a NeoLoad project:
-* lr_start_transaction / lr_end_transaction
-* lr_think_time
-* web_reg_find
-* web_reg_save_param
-* web_reg_save_param_ex
-* web_reg_save_param_regexp
-* web_reg_save_param_xpath
-* web_reg_save_param_json
-* web_url
-* web_submit_data
-* web_custom_request
+| LoadRunner function | Script converter version | 
+| ------------------- | ------------------------ |
+| lr_start_transaction | Version 1.0 | 
+| lr_end_transaction | Version 1.0 |
+| lr_think_time | Version 1.0 |
+| web_reg_find | Version 1.0 | 
+| web_reg_save_param | Version 1.0 | 
+| web_reg_save_param_ex | Version 1.1.1 | 
+| web_reg_save_param_regexp | Version 1.1.1 | 
+| web_reg_save_param_xpath | Version 1.1.1 | 
+| web_reg_save_param_json | Version 1.1.1 | 
+| web_url | Version 1.0 | 
+| web_submit_data | Version 1.0 | 
+| web_custom_request | Version 1.0 | 
 
 ### Parameters
 Below is the list of LoadRunner parameters that can be converted into a NeoLoad project:
