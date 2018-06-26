@@ -80,8 +80,9 @@ During the LoadRunner Scripts conversion, the tool created two log files in the 
 
 | Script converter version | NeoLoad compatibility | ChangeLog |
 | ------------------------ | --------------------- | --------- |
-|Version 1.0.5|Version 6.6+|Support of variable extractor with **All** extractor type (Headers or Body).|
-|Version 1.0.4|Version 6.4+|Logs and live out.|
+|Version 1.1.1|Version 6.6+|<ul><li>Support of method **web_reg_save_param_ex**.</li><li>Support of method **web_reg_save_param_regexp**.</li><li>Support of method **web_reg_save_param_xpath**.</li><li>Support of method **web_reg_save_param_json**.</li></ul>|
+|Version 1.1.0|Version 6.6+|Support **All** Search attribute (Headers or Body) for method **web_reg_save_param**.|
+|Version 1.0|Version 6.4+|Initial version.|
 
 ## Feedbacks and bugs
 Open [an issue](https://github.com/Neotys-Labs/Script-Converter/issues) or contact [Neotys support](https://www.neotys.com/support/contact.html), and provide [log files](#logs) and/or LoadRunner Scripts.
