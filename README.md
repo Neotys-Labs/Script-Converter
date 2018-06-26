@@ -76,6 +76,13 @@ During the LoadRunner Scripts conversion, the tool created two log files in the 
 * **migration_logs/migration.log**: This file contains the migration results. It contains for example the information of all elements either partially supported or not supported.
 * **migration_logs/debug.log**: This file contains the debug results. It contains for example the stacktrace of any error encountered.
 
+## ChangeLog and NeoLoad compability
+
+| Script converter version | NeoLoad compatibility | ChangeLog |
+| ------------------------ | --------------------- | --------- |
+|1.0.5|6.6+|Support of variable extractor with "Both" extractor type|
+|1.0.4|6.4+|Logs and live out|
+
 ## Feedbacks and bugs
 Open [an issue](https://github.com/Neotys-Labs/Script-Converter/issues) or contact [Neotys support](https://www.neotys.com/support/contact.html), and provide [log files](#logs) and/or LoadRunner Scripts.
 
