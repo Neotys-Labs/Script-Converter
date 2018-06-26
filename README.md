@@ -49,6 +49,7 @@ This section lists the LoadRunner functions and parameters covered by the Script
 
 ### Functions
 Below is the list of the LoadRunner functions that can be converted into a NeoLoad project:
+
 | LoadRunner function | Script converter version | 
 | ------------------- | ------------------------ |
 | lr_start_transaction | Version 1.0 | 
