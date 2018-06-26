@@ -76,11 +76,11 @@ During the LoadRunner Scripts conversion, the tool created two log files in the 
 * **migration_logs/migration.log**: This file contains the migration results. It contains for example the information of all elements either partially supported or not supported.
 * **migration_logs/debug.log**: This file contains the debug results. It contains for example the stacktrace of any error encountered.
 
-## NeoLoad compability and ChangeLog 
+## NeoLoad compatibility and ChangeLog 
 
 | Script converter version | NeoLoad compatibility | ChangeLog |
 | ------------------------ | --------------------- | --------- |
-|Version 1.0.5|Version 6.6+|Support of variable extractor with "Both" extractor type.|
+|Version 1.0.5|Version 6.6+|Support of variable extractor with **All** extractor type (Headers or Body).|
 |Version 1.0.4|Version 6.4+|Logs and live out.|
 
 ## Feedbacks and bugs
