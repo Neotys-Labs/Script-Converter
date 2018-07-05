@@ -17,7 +17,7 @@ Java 8 must be installed on the machine used to run the Script Converter. ([Down
 ## Usage
 
 The Script Converter converts LoadRunner Scripts from a folder previously created and including all the scripts to be processed. After the conversion process, the Script Converter creates a NeoLoad Project containing the Virtual User Paths corresponding to each LoadRunner script and provides a detailed summary of the events occurred during the process. The actions, functions and parameters processed can have 3 different status:
-* **Supported**: Compatible with NeoLoad
+* **Supported**: Compatible with NeoLoad.
 * **Supported with a warning**: Available in NeoLoad but some options or arguments are not supported.
 * **Not supported**: Cannot be processed by the converter.
 
