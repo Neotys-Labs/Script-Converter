@@ -64,6 +64,7 @@ Below is the list of the LoadRunner functions that can be converted into a NeoLo
 | web_url | Version 1.0 | 
 | web_submit_data | Version 1.0 | 
 | web_custom_request | Version 1.0 | 
+| web_add_cookie | Version 1.1.1 |
 
 ### Parameters
 Below is the list of LoadRunner parameters that can be converted into a NeoLoad project:
@@ -74,6 +75,7 @@ Below is the list of LoadRunner parameters that can be converted into a NeoLoad 
 
 ### Not Covered
 * other functions
+* some attributes for method web_reg_save_param (HeaderNames, RequestURL, ContentType, DFEs, SaveOffset, Convert, RelFrameID, SaveLen, IgnoreRedirections)
 * logic (conditions and loops)
 * custom C code
 * actions other than in C language (.java, .vba...)
@@ -88,7 +90,7 @@ During the LoadRunner scripts conversion, the tool creates two log files in the 
 
 | Script converter version | NeoLoad compatibility | ChangeLog |
 | ------------------------ | --------------------- | --------- |
-|Version 1.1.1|Version 6.6+|<ul><li>Support of method **web_reg_save_param_ex**.</li><li>Support of method **web_reg_save_param_regexp**.</li><li>Support of method **web_reg_save_param_xpath**.</li><li>Support of method **web_reg_save_param_json**.</li></ul>|
+|Version 1.1.1|Version 6.6+|<ul><li>Support of method **web_reg_save_param_ex**.</li><li>Support of method **web_reg_save_param_regexp**.</li><li>Support of method **web_reg_save_param_xpath**.</li><li>Support of method **web_reg_save_param_json**.</li><li>Support of method **web_add_cookie**.</li></ul>|
 |Version 1.1.0|Version 6.6+|Support **All** Search attribute (Headers or Body) for method **web_reg_save_param**.|
 |Version 1.0|Version 6.4+|Initial version.|
 
