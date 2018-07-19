@@ -10,7 +10,7 @@ Warning: As the Script Converter is currently a preview version, no official sup
 Java 8 must be installed on the machine used to run the Script Converter. ([Download Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html)).
 
 ### Procedure
-1. Download the [latest release](https://github.com/Neotys-Labs/Script-Converter/releases/latest)
+1. Download the [latest release](https://github.com/Neotys-Labs/Script-Converter/releases/)
 2. Unzip in the folder of your choice
 
 ## Usage
@@ -53,22 +53,26 @@ Below is the list of the LoadRunner functions that can be converted into a NeoLo
 | LoadRunner function | Script converter version | 
 | ------------------- | ------------------------ |
 | lr_start_transaction | Version 1.0 |
-| lr_start_sub_transaction | Version 1.1.1 |  
 | lr_end_transaction | Version 1.0 |
-| lr_end_sub_transaction | Version 1.1.1 |
+| lr_start_sub_transaction | Version 1.1.1 |  
 | lr_think_time | Version 1.0 |
 | web_reg_find | Version 1.0 | 
 | web_reg_save_param | Version 1.0 | 
-| web_reg_save_param_ex | Version 1.1.1 | 
-| web_reg_save_param_regexp | Version 1.1.1 | 
-| web_reg_save_param_xpath | Version 1.1.1 | 
-| web_reg_save_param_json | Version 1.1.1 | 
 | web_url | Version 1.0 | 
 | web_submit_data | Version 1.0 | 
 | web_custom_request | Version 1.0 | 
+| lr_end_sub_transaction | Version 1.1.1 |
+| web_reg_save_param_ex | Version 1.1.1 | 
+| web_reg_save_param_regexp | Version 1.1.1 | 
+| web_reg_save_param_xpath | Version 1.1.1 | 
+| web_reg_save_param_json | Version 1.1.1 |
 | web_add_cookie | Version 1.1.1 |
 | web_cache_cleanup | Version 1.1.1 |
 | web_cleanup_cookies | Version 1.1.1 |
+| web_add_header | Version 1.1.2 |
+| web_add_auto_header | Version 1.1.2 |
+| web_submit_form | Version 1.1.2 |
+| web_link | Version 1.1.2 |
 
 ### Parameters
 Below is the list of LoadRunner parameters that can be converted into a NeoLoad project:
@@ -94,6 +98,7 @@ During the LoadRunner scripts conversion, the tool creates two log files in the 
 
 | Script converter version | NeoLoad compatibility | ChangeLog |
 | ------------------------ | --------------------- | --------- |
+|Version 1.1.2|Version 6.6+|<ul><li>Support of method **web_add_header**.</li><li>Support of method **web_add_auto_header**.</li><li>Support of method **web_submit_form**.</li><li>Support of method **web_link**.</li></ul>|
 |Version 1.1.1|Version 6.6+|<ul><li>Support of method **web_reg_save_param_ex**.</li><li>Support of method **web_reg_save_param_regexp**.</li><li>Support of method **web_reg_save_param_xpath**.</li><li>Support of method **web_reg_save_param_json**.</li><li>Support of method **web_add_cookie**.</li><li>Support of method **lr_start_sub_transaction**.</li><li>Support of method **lr_end_sub_transaction**.</li><li>Support of method **web_cache_cleanup**.</li><li>Support of method **web_cleanup_cookies**.</li></ul>|
 |Version 1.1.0|Version 6.6+|Support **All** Search attribute (Headers or Body) for method **web_reg_save_param**.|
 |Version 1.0|Version 6.4+|Initial version.|
