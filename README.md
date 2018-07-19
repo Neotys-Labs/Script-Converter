@@ -54,13 +54,13 @@ Below is the list of the LoadRunner functions that can be converted into a NeoLo
 | ------------------- | ------------------------ |
 | lr_start_transaction | Version 1.0 |
 | lr_end_transaction | Version 1.0 |
-| lr_start_sub_transaction | Version 1.1.1 |  
 | lr_think_time | Version 1.0 |
 | web_reg_find | Version 1.0 | 
 | web_reg_save_param | Version 1.0 | 
 | web_url | Version 1.0 | 
 | web_submit_data | Version 1.0 | 
 | web_custom_request | Version 1.0 | 
+| lr_start_sub_transaction | Version 1.1.1 |  
 | lr_end_sub_transaction | Version 1.1.1 |
 | web_reg_save_param_ex | Version 1.1.1 | 
 | web_reg_save_param_regexp | Version 1.1.1 | 
