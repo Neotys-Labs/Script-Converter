@@ -47,18 +47,12 @@ Warning: The script Converter only supports Web - HTTP/HTML protocols.
 
 This section lists the LoadRunner functions and parameters covered by the Script Converter.
 
-### Functions
-Below is the list of the LoadRunner functions that can be converted into a NeoLoad project:
-* lr_start_transaction
-* lr_end_transaction
-* lr_think_time
+### Web functions
 * web_reg_find 
 * web_reg_save_param 
 * web_url 
 * web_submit_data 
 * web_custom_request 
-* lr_start_sub_transaction  
-* lr_end_sub_transaction
 * web_reg_save_param_ex 
 * web_reg_save_param_regexp 
 * web_reg_save_param_xpath 
@@ -71,6 +65,24 @@ Below is the list of the LoadRunner functions that can be converted into a NeoLo
 * web_submit_form
 * web_link
 
+### LR functions
+* lr_start_transaction
+* lr_end_transaction
+* lr_think_time
+* lr_start_sub_transaction  
+* lr_end_sub_transaction
+* lr_exit
+* lr_get_attrib_string
+* lr_save_string
+
+### String and numeric functions
+* atoi
+* sprintf
+* strcmp
+
+### SAP GUI functions
+For complete list, see file [custom-action-mapping.yaml](https://github.com/Neotys-Labs/neoload-models/blob/master/models-readers/loadrunner-reader/src/main/resources/com/neotys/neoload/model/readers/loadrunner/customaction/custom-action-mapping.yaml).
+
 ### Parameters
 Below is the list of LoadRunner parameters that can be converted into a NeoLoad project:
 * File Parameter
@@ -78,10 +90,13 @@ Below is the list of LoadRunner parameters that can be converted into a NeoLoad 
 * Custom
 * Unique Number
 
+### Selection statements
+* if/then/else statement
+
 ### Not Covered
 * other functions
 * some attributes for method web_reg_save_param (HeaderNames, RequestURL, ContentType, DFEs, SaveOffset, Convert, RelFrameID, SaveLen, IgnoreRedirections)
-* logic (conditions and loops)
+* other selection statements (while, do/while, for)
 * custom C code
 * actions other than in C language (.java, .vba...)
 
@@ -95,6 +110,7 @@ During the LoadRunner scripts conversion, the tool creates two log files in the 
 
 | Script converter version | NeoLoad compatibility | ChangeLog |
 | ------------------------ | --------------------- | --------- |
+|Version 1.2.2|Version 6.6+|<ul><li>Support of SAP GUI methods.</li></ul>|
 |Version 1.1.3|Version 6.6+|<ul><li>Fix Bug 12108 - Configure logging to write file directly in output project location.</li><li>Support of HTTP parameters with empty value.</li><li>Extend support of web_custom_request method.</li></ul>|
 |Version 1.1.2|Version 6.6+|<ul><li>Support of method **web_add_header**.</li><li>Support of method **web_add_auto_header**.</li><li>Support of method **web_submit_form**.</li><li>Support of method **web_link**.</li></ul>|
 |Version 1.1.1|Version 6.6+|<ul><li>Support of method **web_reg_save_param_ex**.</li><li>Support of method **web_reg_save_param_regexp**.</li><li>Support of method **web_reg_save_param_xpath**.</li><li>Support of method **web_reg_save_param_json**.</li><li>Support of method **web_add_cookie**.</li><li>Support of method **lr_start_sub_transaction**.</li><li>Support of method **lr_end_sub_transaction**.</li><li>Support of method **web_cache_cleanup**.</li><li>Support of method **web_cleanup_cookies**.</li></ul>|
