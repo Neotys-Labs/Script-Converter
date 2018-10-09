@@ -110,7 +110,7 @@ During the LoadRunner scripts conversion, the tool creates two log files in the 
 
 | Script converter version | NeoLoad compatibility | ChangeLog |
 | ------------------------ | --------------------- | --------- |
-|Version 1.2.2|Version 6.6+|<ul><li>Support of SAP GUI methods.</li></ul>|
+|Version 1.2.2|Version 6.6+|<ul><li>Support of SAP GUI methods.</li><li>YAML file to declare mapping rules between LR method and NL custom action.</li><li>Support of method **lr_exit**.</li><li>Support of if/then/else statement.</li></ul>|
 |Version 1.1.3|Version 6.6+|<ul><li>Fix Bug 12108 - Configure logging to write file directly in output project location.</li><li>Support of HTTP parameters with empty value.</li><li>Extend support of web_custom_request method.</li></ul>|
 |Version 1.1.2|Version 6.6+|<ul><li>Support of method **web_add_header**.</li><li>Support of method **web_add_auto_header**.</li><li>Support of method **web_submit_form**.</li><li>Support of method **web_link**.</li></ul>|
 |Version 1.1.1|Version 6.6+|<ul><li>Support of method **web_reg_save_param_ex**.</li><li>Support of method **web_reg_save_param_regexp**.</li><li>Support of method **web_reg_save_param_xpath**.</li><li>Support of method **web_reg_save_param_json**.</li><li>Support of method **web_add_cookie**.</li><li>Support of method **lr_start_sub_transaction**.</li><li>Support of method **lr_end_sub_transaction**.</li><li>Support of method **web_cache_cleanup**.</li><li>Support of method **web_cleanup_cookies**.</li></ul>|
