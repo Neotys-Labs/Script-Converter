@@ -37,9 +37,16 @@ Run a command prompt and enter the following line:
 * **NeoLoad output directory**: The folder of the created NeoLoad Project.
 * **NeoLoad Project name**: The name to assign to the NeoLoad project.
 
-### Examples
+#### Examples: 
 * **Windows**: `.\script-converter.bat -source "C:\LoadRunnerScripts\MyAppX" -target "C:\Users\Documents\NeoLoadProjects\MyAppX" -project "MyAppX"`
 * **Linux/OSX**: `./script-converter.sh -source "/home/user/LoadRunnerScripts/MyAppX" -target "/home/user/NeoLoadProjects/MyAppX" -project "MyAppX"`
+
+#### Additional optional arguments
+* **-help**: Print the help.
+* **-log**: Print more information on the stdout.
+* **-report**: Generate a JSON rpeort containing key statistics.
+* **-debug**: Write NeoLoad project configuration as XML format (for debugging purpose).
+* **-mapping <file.yaml>**: Add additional custom action mapping rule from YAML file with UTF-8 charset.
 
 ## Coverage
 
@@ -110,6 +117,7 @@ During the LoadRunner scripts conversion, the tool creates two log files in the 
 
 | Script converter version | NeoLoad compatibility | ChangeLog |
 | ------------------------ | --------------------- | --------- |
+|Version 1.3.0|Version 6.7+||
 |Version 1.2.2|Version 6.6+|<ul><li>Support of SAP GUI methods.</li><li>YAML file to declare mapping rules between LR method and NL custom action.</li><li>Support of method **lr_exit**.</li><li>Support of if/then/else statement.</li></ul>|
 |Version 1.1.3|Version 6.6+|<ul><li>Fix Bug 12108 - Configure logging to write file directly in output project location.</li><li>Support of HTTP parameters with empty value.</li><li>Extend support of web_custom_request method.</li></ul>|
 |Version 1.1.2|Version 6.6+|<ul><li>Support of method **web_add_header**.</li><li>Support of method **web_add_auto_header**.</li><li>Support of method **web_submit_form**.</li><li>Support of method **web_link**.</li></ul>|
