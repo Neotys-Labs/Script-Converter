@@ -47,8 +47,8 @@ Run a command prompt and enter the following line:
 * **-report**: Generate a JSON report containing key statistics.
 * **-debug**: Write NeoLoad project configuration as XML format (for debugging purpose).
 * **-mapping <file.yaml>**: Add additional custom action mapping rule from YAML file with UTF-8 charset.
-* **-projectVersion <projectVersion>**: The NeoLoad project version stored in the NLP file. By default it is: 6.5.
-* **-productVersion <productVersion>**: The NeoLoad product version stored in the NLP file. By default it is: 6.7.0.
+* **-projectVersion <product.version>**: The NeoLoad project version stored in the NLP file. By default it is: 6.5.
+* **-productVersion <project.version>**: The NeoLoad product version stored in the NLP file. By default it is: 6.7.0.
 
 ## Coverage
 
