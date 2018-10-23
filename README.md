@@ -44,9 +44,11 @@ Run a command prompt and enter the following line:
 #### Additional optional arguments
 * **-help**: Print the help.
 * **-log**: Print more information on the stdout.
-* **-report**: Generate a JSON rpeort containing key statistics.
+* **-report**: Generate a JSON report containing key statistics.
 * **-debug**: Write NeoLoad project configuration as XML format (for debugging purpose).
 * **-mapping <file.yaml>**: Add additional custom action mapping rule from YAML file with UTF-8 charset.
+* **-projectVersion <projectVersion>**: The NeoLoad project version stored in the NLP file. By default it is: 6.5.
+* **-productVersion <productVersion>**: The NeoLoad product version stored in the NLP file. By default it is: 6.7.0.
 
 ## Coverage
 
@@ -117,7 +119,7 @@ During the LoadRunner scripts conversion, the tool creates two log files in the 
 
 | Script converter version | NeoLoad compatibility | ChangeLog |
 | ------------------------ | --------------------- | --------- |
-|Version 1.3.0|Version 6.7+||
+|Version 1.3.0|Version 6.7+|<ul><li>Ability to specify NeoLoad project version and NeoLoad product version.</li></ul>|
 |Version 1.2.2|Version 6.6+|<ul><li>Support of SAP GUI methods.</li><li>YAML file to declare mapping rules between LR method and NL custom action.</li><li>Support of method **lr_exit**.</li><li>Support of if/then/else statement.</li></ul>|
 |Version 1.1.3|Version 6.6+|<ul><li>Fix Bug 12108 - Configure logging to write file directly in output project location.</li><li>Support of HTTP parameters with empty value.</li><li>Extend support of web_custom_request method.</li></ul>|
 |Version 1.1.2|Version 6.6+|<ul><li>Support of method **web_add_header**.</li><li>Support of method **web_add_auto_header**.</li><li>Support of method **web_submit_form**.</li><li>Support of method **web_link**.</li></ul>|
