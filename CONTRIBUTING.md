@@ -3,7 +3,7 @@
 **Important**: Contact us at opensource@neotys.com for any question and before working on a modification.
 
 To contribute, send us a pull request: 
-1. Fork the repository.
+1. Fork the appropriate repository (most changes should be done in [neoload-models](https://github.com/Neotys-Labs/neoload-models/)) 
 2. In your fork, make your change in a branch that's based on this repo's master branch.
 3. Commit the change to your fork, using a clear and descriptive commit message.
 4. Create a pull request, answering any questions in the pull request form.
