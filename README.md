@@ -81,5 +81,5 @@ During the LoadRunner Scripts conversion, the tool created two log files in the 
 Open [an issue](https://github.com/Neotys-Labs/Script-Converter/issues) or contact [Neotys support](https://www.neotys.com/support/contact.html), and provide [log files](#logs) and/or LoadRunner Scripts.
 
 ## How to contribute
-The source code is not available yet. It will be opened soon to contribution.
+See [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
