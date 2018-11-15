@@ -1,0 +1,134 @@
+<h1 id="scriptconverter">Script Converter</h1>
+
+<p>The Script Converter is a command line tool that converts LoadRunner Scripts into a NeoLoad project.</p>
+
+<p>Warning: As the Script Converter is currently a preview version, no official support is provided for the tool. We would really appreciate your feedback on the product. Feel free to contact us at <a href="https://www.neotys.com/support/contact.html">Neotys support</a>.</p>
+
+<h2 id="installation">Installation</h2>
+
+<h3 id="requirement">Requirement</h3>
+
+<p>Java 8 must be installed on the machine used to run the Script Converter. (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Download Java</a>).</p>
+
+<h3 id="procedure">Procedure</h3>
+
+<ol>
+<li>Download the <a href="https://github.com/Neotys-Labs/Script-Converter/releases/latest">latest release</a></li>
+
+<li>Unzip in the folder of your choice</li>
+</ol>
+
+<h2 id="usage">Usage</h2>
+
+<p>The Script Converter converts LoadRunner Scripts from a folder previously created and including all the scripts to be processed. After the conversion process, the Script Converter creates a NeoLoad Project containing the Virtual User Paths corresponding to each LoadRunner script and provides a detailed summary of the events occurred during the process. The actions, functions and parameters processed can have 3 different status:</p>
+
+<ul>
+<li><strong>Supported</strong>: Compatible with NeoLoad</li>
+
+<li><strong>Supported with a warning</strong>: Available in NeoLoad but some options or arguments are not supported.</li>
+
+<li><strong>Not supported</strong>: Cannot be processed by the converter.</li>
+</ul>
+
+<p>For more information, see the <a href="#coverage">Coverage</a> section.</p>
+
+<p>After the script conversion is done, it is recommended to verify the content of the <a href="#logs">migration log</a> to manually process elements either partially supported, or not supported.  </p>
+
+<h3 id="executable">Executable</h3>
+
+<ul>
+<li><strong>Windows</strong>: <code>script-converter.bat</code></li>
+
+<li><strong>Linux/OSX</strong>: <code>script-converter.sh</code></li>
+</ul>
+
+<h3 id="arguments">Arguments</h3>
+
+<p>Run a command prompt and enter the following line:
+<code>-source &lt;LR Scripts folder&gt; -target &lt;NeoLoad output directory&gt; -project &lt;NeoLoad Project name&gt;</code></p>
+
+<ul>
+<li><strong>LR Scripts folder</strong>: Source directory where all scripts in each sub-directory will be converted into the output Project.</li>
+
+<li><strong>NeoLoad output directory</strong>: The folder of the created NeoLoad Project.</li>
+
+<li><strong>NeoLoad Project name</strong>: The name to assign to the NeoLoad project.</li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<ul>
+<li><strong>Windows</strong>: <code>.\script-converter.bat -source "C:\LoadRunnerScripts\MyAppX" -target "C:\Users\Documents\NeoLoadProjects\MyAppX" -project "MyAppX"</code></li>
+
+<li><strong>Linux/OSX</strong>: <code>./script-converter.sh -source "/home/user/LoadRunnerScripts/MyAppX" -target "/home/user/NeoLoadProjects/MyAppX" -project "MyAppX"</code></li>
+</ul>
+
+<h2 id="coverage">Coverage</h2>
+
+<p>Warning: The script Converter only supports Web - HTTP/HTML protocols.</p>
+
+<p>This section lists the LoadRunner functions and parameters covered by the Script Converter.</p>
+
+<h3 id="functions">Functions</h3>
+
+<p>Below is the list of the LoadRunner functions that can be converted into a NeoLoad project:</p>
+
+<ul>
+<li>lr<em>start</em>transaction / lr<em>end</em>transaction</li>
+
+<li>lr<em>think</em>time</li>
+
+<li>web<em>reg</em>find</li>
+
+<li>web<em>reg</em>save_param</li>
+
+<li>web_url</li>
+
+<li>web<em>submit</em>data</li>
+
+<li>web<em>custom</em>request</li>
+</ul>
+
+<h3 id="parameters">Parameters</h3>
+
+<p>Below is the list of LoadRunner parameters that can be converted into a NeoLoad project:</p>
+
+<ul>
+<li>File Parameter</li>
+
+<li>Table Parameter</li>
+
+<li>Custom</li>
+
+<li>Unique Number</li>
+</ul>
+
+<h3 id="notcovered">Not Covered</h3>
+
+<ul>
+<li>other functions</li>
+
+<li>logic (conditions and loops)</li>
+
+<li>custom C code</li>
+
+<li>actions other than in C language (.java, .vba...)</li>
+</ul>
+
+<h2 id="logs">Logs</h2>
+
+<p>During the LoadRunner Scripts conversion, the tool created two log files in the NeoLoad project folder: </p>
+
+<ul>
+<li><strong>migration_logs/migration.log</strong>: This file contains the migration results. It contains for example the information of all elements either partially supported or not supported.</li>
+
+<li><strong>migration_logs/debug.log</strong>: This file contains the debug results. It contains for example the stacktrace of any error encountered.</li>
+</ul>
+
+<h2 id="feedbacksandbugs">Feedbacks and bugs</h2>
+
+<p>Open <a href="https://github.com/Neotys-Labs/Script-Converter/issues">an issue</a> or contact <a href="https://www.neotys.com/support/contact.html">Neotys support</a>, and provide <a href="#logs">log files</a> and/or LoadRunner Scripts.</p>
+
+<h2 id="howtocontribute">How to contribute</h2>
+
+<p>The source code is not available yet. It will be opened soon to contribution.</p>

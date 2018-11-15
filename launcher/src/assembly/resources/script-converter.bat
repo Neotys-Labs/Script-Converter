@@ -1,0 +1,1 @@
+java -jar script-converter-all.jar %*

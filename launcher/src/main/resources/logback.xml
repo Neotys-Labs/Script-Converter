@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<property name="logs.folder" value="${logs.folder}" />
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FUNCTIONAL" class="ch.qos.logback.core.FileAppender">
+        <file>${logs.folder}/migration.log</file>
+        <append>false</append>
+        <immediateFlush>true</immediateFlush>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-4level - %msg%n</pattern>
+        </encoder>
+    </appender>
+    
+    <appender name="DEBUG" class="ch.qos.logback.core.FileAppender">
+        <file>${logs.folder}/debug.log</file>
+        <append>false</append>
+        <immediateFlush>true</immediateFlush>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-4level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="LIVE" level="debug">
+        <appender-ref ref="STDOUT" />
+    </logger>
+    
+    <logger name="FUNCTIONAL" level="debug">
+        <appender-ref ref="FUNCTIONAL" />
+    </logger>
+    
+    <root level="debug">
+        <appender-ref ref="DEBUG" />
+    </root>
+</configuration>

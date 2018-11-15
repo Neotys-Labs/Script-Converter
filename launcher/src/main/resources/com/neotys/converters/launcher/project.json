@@ -1,0 +1,51 @@
+{
+  "MyProject": {
+    "servers": [],
+    "variables": [],
+    "userPaths": [ {
+      "MyUser": {
+        "init": {
+            "childs": [
+              {
+                "Transaction": {
+                  "name":"myTransaction",
+                  "childs": [{
+                      "delay": {
+                        "type": "Delay",
+                        "delay": "1000",
+                        "description": null,
+                        "uid": null
+                  }]
+                }
+              }
+            ]
+          },
+        "actionsContainer": {
+          "Container": {
+          "name": "Action",
+          "childs": [
+            {
+              "Delay": {
+                "delay": "1000",
+                "name": "delay",
+                "description": null,
+                "uid": null
+              }
+            }
+          ]
+        }
+        },
+        "endContainer": {
+          "Container": {
+            "name": "end",
+            "childs": []
+          }
+        }
+      }
+    }]
+  }
+}
+
+
+
+
