@@ -50,7 +50,7 @@ Run a command prompt and enter the following line:
 
 ## Coverage
 
-Warning: The script Converter only supports Web - HTTP/HTML protocols.
+The script Converter supports 'Web - HTTP/HTML' and 'SAP GUI' protocols.
 
 This section lists the LoadRunner functions and parameters covered by the Script Converter.
 
@@ -75,6 +75,10 @@ Below is the list of the LoadRunner functions that can be converted into a NeoLo
 * web_submit_form
 * web_link
 
+**SAP GUI functions**
+
+See [custom-action-mapping.yaml](https://github.com/Neotys-Labs/neoload-models/blob/master/models-readers/loadrunner-reader/src/main/resources/com/neotys/neoload/model/readers/loadrunner/customaction/custom-action-mapping.yaml)
+
 **LR functions**
 
 * lr_start_transaction
@@ -91,10 +95,6 @@ Below is the list of the LoadRunner functions that can be converted into a NeoLo
 * atoi
 * sprintf
 * strcmp
-
-**SAP GUI functions**
-
-See [custom-action-mapping.yaml](https://github.com/Neotys-Labs/neoload-models/blob/master/models-readers/loadrunner-reader/src/main/resources/com/neotys/neoload/model/readers/loadrunner/customaction/custom-action-mapping.yaml)
 
 **Selection statements**
 
