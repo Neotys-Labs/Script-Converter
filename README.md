@@ -1,10 +1,16 @@
 # Script Converter
 
-The Script Converter is a command line tool that converts LoadRunner Scripts into a NeoLoad project.
+The Script Converter is a tool that converts LoadRunner Scripts into a NeoLoad project.
 
-Warning: As the Script Converter is currently a preview version, no official support is provided for the tool. We would really appreciate your feedback on the product. Feel free to contact us at [Neotys support](https://www.neotys.com/support/contact.html).
+It can be used as an independ command line tool or as an embedded feature in NeoLoad.
 
-## Installation
+## Using NeoLoad embedded converter
+
+Use 'tools/Script Converter...' menu or use the command line as described in the [documentation](https://www.neotys.com/documents/doc/neoload/latest/en/html/#31348.htm). 
+
+The embedded Script Converter can be patched by replacing the Jar file: &lt;install-dir>\converters\converters-launcher-{version}.jar 
+
+## Installation as an Independent command line tool
 
 ### Download
 
@@ -50,13 +56,49 @@ This section lists the LoadRunner functions and parameters covered by the Script
 
 ### Functions
 Below is the list of the LoadRunner functions that can be converted into a NeoLoad project:
-* lr_start_transaction / lr_end_transaction
-* lr_think_time
+
+**Web functions**
 * web_reg_find
 * web_reg_save_param
 * web_url
 * web_submit_data
 * web_custom_request
+* web_reg_save_param_ex
+* web_reg_save_param_regexp
+* web_reg_save_param_xpath
+* web_reg_save_param_json
+* web_add_cookie
+* web_cache_cleanup
+* web_cleanup_cookies
+* web_add_header
+* web_add_auto_header
+* web_submit_form
+* web_link
+
+**LR functions**
+
+* lr_start_transaction
+* lr_end_transaction
+* lr_think_time
+* lr_start_sub_transaction
+* lr_end_sub_transaction
+* lr_exit
+* lr_get_attrib_string
+* lr_save_string
+
+**String and numeric functions**
+
+* atoi
+* sprintf
+* strcmp
+
+**SAP GUI functions**
+
+See [custom-action-mapping.yaml](https://github.com/Neotys-Labs/neoload-models/blob/master/models-readers/loadrunner-reader/src/main/resources/com/neotys/neoload/model/readers/loadrunner/customaction/custom-action-mapping.yaml)
+
+**Selection statements**
+
+if/then/else statement
 
 ### Parameters
 Below is the list of LoadRunner parameters that can be converted into a NeoLoad project:
