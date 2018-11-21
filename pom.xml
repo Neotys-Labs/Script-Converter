@@ -144,9 +144,4 @@
 		</plugins>
 	</build>
 
-	<scm>
-		<connection>scm:git:http://git.intranet.neotys.com:8080/converters</connection>
-		<url>http://git.intranet.neotys.com:8080/converters</url>
-	</scm>
-
 </project>
