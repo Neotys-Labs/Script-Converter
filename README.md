@@ -118,13 +118,14 @@ Below is the list of LoadRunner parameters that can be converted into a NeoLoad 
 
 ### Not Covered
 * other functions
-* logic (conditions and loops)
+* some attributes for method web_reg_save_param (HeaderNames, RequestURL, ContentType, DFEs, SaveOffset, Convert, RelFrameID, SaveLen, IgnoreRedirections)
+* other selection statements (while, do/while, for)
 * custom C code
 * actions other than in C language (.java, .vba...)
 
 ## Logs
 
-During the LoadRunner Scripts conversion, the tool created two log files in the NeoLoad project folder: 
+During the LoadRunner Scripts conversion, the tool creates two log files in the NeoLoad project folder: 
 * **migration_logs/migration.log**: This file contains the migration results. It contains for example the information of all elements either partially supported or not supported.
 * **migration_logs/debug.log**: This file contains the debug results. It contains for example the stacktrace of any error encountered.
 
