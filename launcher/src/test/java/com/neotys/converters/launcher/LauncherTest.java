@@ -24,6 +24,13 @@ public class LauncherTest {
 	}
 
 	@Test
+	public void mainTestH() {
+		exit.expectSystemExitWithStatus(0);
+		Launcher.main(ImmutableList.of("-h").toArray(new String[0]));
+		Assert.fail();
+	}
+
+	@Test
 	public void mainTestInvalid() {
 		exit.expectSystemExitWithStatus(1);
 		Launcher.main("-p test".split(" "));
@@ -44,7 +51,7 @@ public class LauncherTest {
 		exit.expectSystemExitWithStatus(1);
 		final File sourceDir = Files.createTempDir();
 		final File tempFile = File.createTempFile("pre", "suf");
-		final String args = "-m" + tempFile.getAbsolutePath() + " -s " + sourceDir.getAbsolutePath() + " -t " + TARGET_DIR.getAbsolutePath() + " -p project";
+		final String args = "-d -m" + tempFile.getAbsolutePath() + " -s " + sourceDir.getAbsolutePath() + " -t " + TARGET_DIR.getAbsolutePath() + " -p project";
 		Launcher.main(args.split(" "));
 		Assert.fail();
 	}
