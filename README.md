@@ -48,6 +48,15 @@ Run a command prompt and enter the following line:
 * **Windows**: `.\script-converter.bat -source "C:\LoadRunnerScripts\MyAppX" -target "C:\Users\Documents\NeoLoadProjects\MyAppX" -project "MyAppX"`
 * **Linux/OSX**: `./script-converter.sh -source "/home/user/LoadRunnerScripts/MyAppX" -target "/home/user/NeoLoadProjects/MyAppX" -project "MyAppX"`
 
+#### Additional optional arguments
+* **-help**: Print the help.
+* **-log**: Print more information on the stdout.
+* **-report**: Generate a JSON report containing key statistics.
+* **-debug**: Write NeoLoad project configuration as XML format (for debugging purpose).
+* **-mapping <file.yaml>**: Add additional custom action mapping rule from YAML file with UTF-8 charset.
+* **-projectVersion <product.version>**: The NeoLoad project version stored in the NLP file. By default it is: 6.5.
+* **-productVersion <project.version>**: The NeoLoad product version stored in the NLP file. By default it is: 6.7.0.
+
 ## Coverage
 
 The script Converter supports 'Web - HTTP/HTML' and 'SAP GUI' protocols.
@@ -118,6 +127,19 @@ Below is the list of LoadRunner parameters that can be converted into a NeoLoad 
 During the LoadRunner Scripts conversion, the tool created two log files in the NeoLoad project folder: 
 * **migration_logs/migration.log**: This file contains the migration results. It contains for example the information of all elements either partially supported or not supported.
 * **migration_logs/debug.log**: This file contains the debug results. It contains for example the stacktrace of any error encountered.
+
+## NeoLoad compatibility and ChangeLog 
+
+| Script converter version | NeoLoad compatibility | ChangeLog |
+| ------------------------ | --------------------- | --------- |
+|Version 1.3.0 | Version 6.7+ | <ul><li>Ability to specify NeoLoad project version and NeoLoad product version.</li></ul>|
+|Version 1.2.2 | Version 6.6+ | <ul><li>Support of SAP GUI methods.</li><li>YAML file to declare mapping rules between LR method and NL custom action.</li><li>Support of method **lr_exit**.</li><li>Support of if/then/else statement.</li></ul>|
+|Version 1.1.3 | Version 6.6+ | <ul><li>Fix Bug 12108 - Configure logging to write file directly in output project location.</li><li>Support of HTTP parameters with empty value.</li><li>Extend support of web_custom_request method.</li></ul>|
+|Version 1.1.2 | Version 6.6+ | <ul><li>Support of method **web_add_header**.</li><li>Support of method **web_add_auto_header**.</li><li>Support of method **web_submit_form**.</li><li>Support of method **web_link**.</li></ul>|
+|Version 1.1.1 | Version 6.6+ | <ul><li>Support of method **web_reg_save_param_ex**.</li><li>Support of method **web_reg_save_param_regexp**.</li><li>Support of method **web_reg_save_param_xpath**.</li><li>Support of method **web_reg_save_param_json**.</li><li>Support of method **web_add_cookie**.</li><li>Support of method **lr_start_sub_transaction**.</li><li>Support of method **lr_end_sub_transaction**.</li><li>Support of method **web_cache_cleanup**.</li><li>Support of method **web_cleanup_cookies**.</li></ul>|
+|Version 1.1.0 | Version 6.6+ | Support **All** Search attribute (Headers or Body) for method **web_reg_save_param**.|
+|Version 1.0   | Version 6.4+ | Initial version.|
+
 
 ## Feedbacks and bugs
 Open [an issue](https://github.com/Neotys-Labs/Script-Converter/issues) or contact [Neotys support](https://www.neotys.com/support/contact.html), and provide [log files](#logs) and/or LoadRunner Scripts.
