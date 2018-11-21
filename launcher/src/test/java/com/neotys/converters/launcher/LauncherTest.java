@@ -8,12 +8,13 @@ import org.junit.Test;
 import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 
 import java.io.File;
+import java.io.IOException;
 
 public class LauncherTest {
 
 	@Rule
 	public final ExpectedSystemExit exit = ExpectedSystemExit.none();
-	public static final File TARGET_DIR = Files.createTempDir();
+	private static final File TARGET_DIR = Files.createTempDir();
 
 	@Test
 	public void mainTestHelp() {
@@ -34,6 +35,16 @@ public class LauncherTest {
 		exit.expectSystemExitWithStatus(2);
 		final File sourceDir = Files.createTempDir();
 		final String args = "-l -s " + sourceDir.getAbsolutePath() + " -t " + TARGET_DIR.getAbsolutePath() + " -p project";
+		Launcher.main(args.split(" "));
+		Assert.fail();
+	}
+
+	@Test
+	public void mainTestInvalidCustomMapping() throws IOException {
+		exit.expectSystemExitWithStatus(1);
+		final File sourceDir = Files.createTempDir();
+		final File tempFile = File.createTempFile("pre", "suf");
+		final String args = "-m" + tempFile.getAbsolutePath() + " -s " + sourceDir.getAbsolutePath() + " -t " + TARGET_DIR.getAbsolutePath() + " -p project";
 		Launcher.main(args.split(" "));
 		Assert.fail();
 	}
