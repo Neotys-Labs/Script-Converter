@@ -17,6 +17,8 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
@@ -107,11 +109,11 @@ public class Launcher {
 		if(cmd.hasOption('m')){
 			final String path = cmd.getOptionValue("m");
 			try{				
-				additionalCustomActionMappingContent = new String(Files.readAllBytes(Paths.get(path)));
+				additionalCustomActionMappingContent = new String(Files.readAllBytes(Paths.get(path)), StandardCharsets.UTF_8);
 				if(additionalCustomActionMappingContent.startsWith(UTF8_BOM)){
 					additionalCustomActionMappingContent = additionalCustomActionMappingContent.substring(UTF8_BOM.length());
 				} else {
-					liveLogger.error("Error while reading file " + path + ". Encoding is not UTF-8");
+					liveLogger.error("Error while reading file " + path + ". Encoding is not UTF-8: " + additionalCustomActionMappingContent.substring(0, 4));
 					System.exit(1);
 					return;
 				}
