@@ -119,7 +119,8 @@ During the LoadRunner scripts conversion, the tool creates two log files in the 
 
 | Script converter version | NeoLoad compatibility | ChangeLog |
 | ------------------------ | --------------------- | --------- |
-|Version 1.3.3|Version 6.7+|<ul><li>Fix: Script was not converted when variables were declared before the method.</li></ul>|
+|Version 1.3.4|Version 6.7+|<ul><li>Fix: Script was not converted when variables were declared before the method.</li></ul>|
+|Version 1.3.3|Version 6.7+|<ul><li>Fix charset issue for mapping.yaml file.</li></ul>|
 |Version 1.3.0|Version 6.7+|<ul><li>Ability to specify NeoLoad project version and NeoLoad product version.</li></ul>|
 |Version 1.2.2|Version 6.6+|<ul><li>Support of SAP GUI methods.</li><li>YAML file to declare mapping rules between LR method and NL custom action.</li><li>Support of method **lr_exit**.</li><li>Support of if/then/else statement.</li></ul>|
 |Version 1.1.3|Version 6.6+|<ul><li>Fix Bug 12108 - Configure logging to write file directly in output project location.</li><li>Support of HTTP parameters with empty value.</li><li>Extend support of web_custom_request method.</li></ul>|
