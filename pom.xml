@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.neotys.converters</groupId>
 	<artifactId>converters-root</artifactId>
-	<version>1.3.2-SNAPSHOT</version>
+	<version>1.3.3</version>
 	<packaging>pom</packaging>
 
 	<parent>
@@ -20,7 +20,7 @@
 		<project.scm.id>git</project.scm.id>
 		<encoding>UTF-8</encoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<neoload-models.version>2.0.6-SNAPSHOT</neoload-models.version>
+		<neoload-models.version>2.0.7</neoload-models.version>
 		<slf4j.version>1.7.25</slf4j.version>
 		<logback.classic.version>1.2.3</logback.classic.version>
 		<immutables.version>2.5.5</immutables.version>
