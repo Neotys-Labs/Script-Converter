@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.neotys.converters</groupId>
 		<artifactId>converters-root</artifactId>
-		<version>1.3.5</version>
+		<version>1.3.6</version>
 	</parent>
 	<artifactId>converters-launcher</artifactId>
 
@@ -114,7 +114,7 @@
 							<goal>copy</goal>
 						</goals>
 						<configuration>
-							<sourceFile>target/converters-launcher-1.3.5-all.jar</sourceFile>
+							<sourceFile>target/converters-launcher-${project.version}-all.jar</sourceFile>
 							<destinationFile>target/converters-launcher.jar</destinationFile>
 						</configuration>
 					</execution>

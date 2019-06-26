@@ -119,6 +119,7 @@ During the LoadRunner scripts conversion, the tool creates two log files in the 
 
 | Script converter version | NeoLoad compatibility | ChangeLog |
 | ------------------------ | --------------------- | --------- |
+|Version 1.3.6|Version 6.7+|<ul><li>Fix: Transactions started or ended within a block statement were ignored.</li></ul>|
 |Version 1.3.5|Version 6.7+|<ul><li>Fix: Could not convert random number variable out of range [-2147483648 to 2147483647].</li></ul>|
 |Version 1.3.4|Version 6.7+|<ul><li>Fix: Script was not converted when variables were declared before the method.</li></ul>|
 |Version 1.3.3|Version 6.7+|<ul><li>Fix charset issue for mapping.yaml file.</li></ul>|
