@@ -130,16 +130,12 @@ public class Launcher {
         String status = PASSED;
         final boolean passed;
         try {
-            final Reader projectReader;
-//			if(option.contains(jmeter)) {
-//				reader = new JmeterReader(jdklsfjlsdkfjlsd)
-//			} else
 
             if (cmd.hasOption("jm")) {
-                String JmPath = cmd.getOptionValue("jm");
+                String jmPath = cmd.getOptionValue("jm");
                 com.neotys.neoload.model.v3.project.Project project = null;
                 com.neotys.neoload.model.v3.readers.Reader converter = null;
-                converter = new JMeterReader(cmdEventListener, sourceFolder, projectName, JmPath);
+                converter = new JMeterReader(cmdEventListener, sourceFolder, projectName, jmPath);
                 project = converter.read();
                 final com.neotys.neoload.model.v3.writers.neoload.NeoLoadWriter nlWriter = new com.neotys.neoload.model.v3.writers.neoload.NeoLoadWriter(com.neotys.neoload.model.v3.project.ImmutableProject.copyOf(project).withName(projectName),
                         nlProjectFolder, converter.getFileToCopy());
@@ -155,8 +151,6 @@ public class Launcher {
                         nlProjectFolder, converter.getFileToCopy());
                 nlWriter.write(zipConfig, projectVersion, productVersion);
             }
-            //TODO PUt Here the switch between LD & JM
-
 
         } catch (
                 final Exception e) {
