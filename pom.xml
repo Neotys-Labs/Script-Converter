@@ -14,7 +14,7 @@
 		<project.scm.id>git</project.scm.id>
 		<encoding>UTF-8</encoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<neoload-models.version>2.0.6</neoload-models.version>
+		<neoload-models.version>3.2.1-SNAPSHOT</neoload-models.version>
 		<slf4j.version>1.7.25</slf4j.version>
 		<logback.classic.version>1.2.3</logback.classic.version>
 		<immutables.version>2.5.5</immutables.version>
@@ -40,7 +40,22 @@
 				<artifactId>neoload-writer</artifactId>
 				<version>${neoload-models.version}</version>
 			</dependency>
-
+			<dependency>
+				<groupId>com.neotys.neoload</groupId>
+				<artifactId>jmeter-reader</artifactId>
+				<version>${neoload-models.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>2.9.5</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.stefanbirkner</groupId>
+				<artifactId>system-rules</artifactId>
+				<version>1.17.0</version>
+				<scope>test</scope>
+			</dependency>
 			<!-- 3rd parties -->
 			<dependency>
 				<groupId>org.slf4j</groupId>
@@ -62,7 +77,16 @@
 				<artifactId>gson</artifactId>
 				<version>${immutables.version}</version>
 			</dependency>
-
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>2.9.5</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-cli</groupId>
+				<artifactId>commons-cli</artifactId>
+				<version>1.4</version>
+			</dependency>
 			<!-- Test -->
 			<dependency>
 				<groupId>junit</groupId>
