@@ -110,10 +110,6 @@ public class Launcher {
 				additionalCustomActionMappingContent = new String(Files.readAllBytes(Paths.get(path)));
 				if(additionalCustomActionMappingContent.startsWith(UTF8_BOM)){
 					additionalCustomActionMappingContent = additionalCustomActionMappingContent.substring(UTF8_BOM.length());
-				} else {
-					liveLogger.error("Error while reading file " + path + ". Encoding is not UTF-8");
-					System.exit(1);
-					return;
 				}
 			} catch (final Exception exception){
 				liveLogger.error("Error while reading file " + path, exception);
