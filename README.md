@@ -119,6 +119,7 @@ During the LoadRunner scripts conversion, the tool creates two log files in the 
 
 | Script converter version | NeoLoad compatibility | ChangeLog |
 | ------------------------ | --------------------- | --------- |
+|Version 1.3.7|Version 6.7+|<ul><li>Fix: Escape transaction and page names according to NeoLoad validator rues.</li><li>Add support of sapgui_table_fill_data.</li><li>Fix method web_reg_find to set validator only on next request.</li><li>Support variablilisation of sapgui_logon method parameters (user_name, password, client_num, language).</li></ul>|
 |Version 1.3.6|Version 6.7+|<ul><li>Fix: Transactions started or ended within a block statement were ignored.</li></ul>|
 |Version 1.3.5|Version 6.7+|<ul><li>Fix: Could not convert random number variable out of range [-2147483648 to 2147483647].</li></ul>|
 |Version 1.3.4|Version 6.7+|<ul><li>Fix: Script was not converted when variables were declared before the method.</li></ul>|
@@ -134,6 +135,10 @@ During the LoadRunner scripts conversion, the tool creates two log files in the 
 ## Feedbacks and bugs
 Open [an issue](https://github.com/Neotys-Labs/Script-Converter/issues) or contact [Neotys support](https://www.neotys.com/support/contact.html), and provide [log files](#logs) and/or LoadRunner Scripts.
 
-## How to contribute
-The source code is not available yet. It will be opened soon to contribution.
+## Known issues
+- Converter throws StackOverflowError: increase XSS with additional parameter (for example -Xss10M).
 
+## How to contribute
+
+The source code of neoload-models [here](https://github.com/Neotys-Labs/neoload-models/).
+To contribute, see [CONTRIBUTING.md](CONTRIBUTING.md) file.
