@@ -6,12 +6,25 @@ Warning: As the Script Converter is currently a preview version, no official sup
 
 ## Installation
 
-### Requirement
-Java 8 must be installed on the machine used to run the Script Converter. ([Download Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html)).
+### Standalone
 
-### Procedure
+1. Make sure Java 8 is installed on the machine used to run the Script Converter. ([Download Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html)).
+2. Download the [latest release](https://github.com/Neotys-Labs/Script-Converter/releases/)
+3. Unzip in the folder of your choice
+
+### Embedded in NeoLoad
+
+NeoLoad embeds the Script Converter. It is accessible by selecting the Script Converter command in the Tools menu, more info on the [NeoLoad documentation](https://www.neotys.com/documents/doc/neoload/latest/en/html/#31348.htm).
+
+To update the Script Converter, follow the below procedure: 
+
 1. Download the [latest release](https://github.com/Neotys-Labs/Script-Converter/releases/)
-2. Unzip in the folder of your choice
+2. Unzip file
+3. Go to NeoLoad installation directory, then folder `converters`. For example: `C:\Program Files\NeoLoad\converters`
+4. Delete existing file `converters-launcher-X.Y.Z-all.jar`
+5. Move `converters-launcher.jar` to that `converters` folder
+
+The lastest version of the Script Converter can now be used directly from NeoLoad. No restart is needed as the Jar file is loaded on the fly.
 
 ## Usage
 
