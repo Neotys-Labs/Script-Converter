@@ -30,7 +30,7 @@ import static com.neotys.neoload.model.writers.neoload.NeoLoadWriter.DEFAULT_PRO
 public class Launcher {
 
     private static final String PASSED = "Passed";
-    private static final String MIGRATION_LOG_FOLDER = "migration_logs";
+    private static final String CONVERSION_LOG_FOLDER = "conversion_logs";
     private static final String UTF8_BOM = "\uFEFF";
     private static final String PROJECT_VERSION_OPTION = "projectVersion";
     private static final String PRODUCT_VERSION_OPTION = "productVersion";
@@ -79,7 +79,7 @@ public class Launcher {
         }
 
 
-        System.setProperty("logs.folder", nlProjectFolder + File.separator + MIGRATION_LOG_FOLDER);
+        System.setProperty("logs.folder", nlProjectFolder + File.separator + CONVERSION_LOG_FOLDER);
         final Logger liveLogger = LoggerFactory.getLogger("LIVE");
 
         if (cmd.hasOption('l')) {
@@ -154,7 +154,7 @@ public class Launcher {
 
         } catch (
                 final Exception e) {
-            liveLogger.error("Error during project migration, migration aborted.", e);
+            liveLogger.error("Error during project writing, conversion aborted.", e);
             status = "Failed: " + e.getMessage();
         } finally {
             passed = PASSED.equals(status);
@@ -179,15 +179,15 @@ public class Launcher {
     private static Options getCmdLineOptions() {
         final Options options = new Options();
         options.addOption("h", "help", false, "print this message");
-        options.addRequiredOption("s", "source", true, "The source directory of the project to migrate.");
+        options.addRequiredOption("s", "source", true, "The source directory of the project to convert.");
         options.addRequiredOption("t", "target", true, "The target folder where the generated project will be written.");
-        options.addRequiredOption("p", "project", true, "The name of the converted project.");
+        options.addRequiredOption("p", "project", true, "The name of the generated NeoLoad project.");
         options.addOption("l", "log", false, "More information is displayed on stdout.");
         options.addOption("r", "report", false, "A JSON report containing key statistics is generated.");
         options.addOption("d", "debug", false, "Store project as XML format for debugging purpose.");
         options.addOption("m", "mapping", true, "Add additional custom action mapping rule from YAML file with UTF-8 charset.");
-        options.addOption("jm", "jmeter", true, "Convert your JMetter project into a Neoload project. Please put the FolderPath of your JMeter");
-        options.addOption("ld", "loadrunner", false, "Convert your LoadRunner project into a Neoload project");
+        options.addOption("jm", "jmeter", true, "Convert your JMeter project into a Neoload project. As argument, put the installation full path of the JMeter distribution.");
+        options.addOption("ld", "loadrunner", false, "Convert your LoadRunner project into a Neoload project.");
         options.addOption(PROJECT_VERSION_OPTION, true, "The NeoLoad project version stored in the NLP file. By default it is: " + DEFAULT_PROJECT_VERSION + ".");
         options.addOption(PRODUCT_VERSION_OPTION, true, "The NeoLoad product version stored in the NLP file. By default it is: " + DEFAULT_PRODUCT_VERSION + ".");
         return options;
@@ -202,9 +202,9 @@ public class Launcher {
         if (!f.exists()) {
             Files.createDirectories(Paths.get(nlProjectFolder));
         } else if (f.isFile()) {
-            throw new IOException("The destination is not a directory, migration aborted.");
+            throw new IOException("The destination is not a directory, conversion aborted.");
         }
-        final File logsFolder = new File(nlProjectFolder, MIGRATION_LOG_FOLDER);
+        final File logsFolder = new File(nlProjectFolder, CONVERSION_LOG_FOLDER);
         logsFolder.mkdir();
     }
 }
