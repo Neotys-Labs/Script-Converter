@@ -8,9 +8,9 @@ import ch.qos.logback.core.ConsoleAppender;
 import com.neotys.neoload.model.ImmutableProject;
 import com.neotys.neoload.model.Project;
 import com.neotys.neoload.model.listener.CmdEventListener;
+import com.neotys.neoload.model.readers.Reader;
 import com.neotys.neoload.model.readers.jmeter.JMeterReader;
 import com.neotys.neoload.model.readers.loadrunner.LoadRunnerReader;
-import com.neotys.neoload.model.readers.Reader;
 import com.neotys.neoload.model.stats.ProjectType;
 import com.neotys.neoload.model.writers.neoload.NeoLoadWriter;
 import org.apache.commons.cli.*;
@@ -78,7 +78,6 @@ public class Launcher {
             return;
         }
 
-
         System.setProperty("logs.folder", nlProjectFolder + File.separator + CONVERSION_LOG_FOLDER);
         final Logger liveLogger = LoggerFactory.getLogger("LIVE");
 
@@ -138,7 +137,7 @@ public class Launcher {
                 converter = new JMeterReader(cmdEventListener, sourceFolder, projectName, jmPath);
                 project = converter.read();
                 final com.neotys.neoload.model.v3.writers.neoload.NeoLoadWriter nlWriter = new com.neotys.neoload.model.v3.writers.neoload.NeoLoadWriter(com.neotys.neoload.model.v3.project.ImmutableProject.copyOf(project).withName(projectName),
-                        nlProjectFolder, converter.getFileToCopy());
+                        nlProjectFolder);
                 nlWriter.write(zipConfig, projectVersion, productVersion);
 
             } else {
