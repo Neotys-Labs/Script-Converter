@@ -2,14 +2,6 @@
 
 The Script Converter is a tool that converts LoadRunner Scripts into a NeoLoad project.
 
-It can be used as an independ command line tool or as an embedded feature in NeoLoad.
-
-## Using NeoLoad embedded converter
-
-Use 'tools/Script Converter...' menu or use the command line as described in the [documentation](https://www.neotys.com/documents/doc/neoload/latest/en/html/#31348.htm). 
-
-The embedded Script Converter can be patched by replacing the Jar file: &lt;install-dir>\converters\converters-launcher-{version}.jar 
-
 ## Installation as an Independent command line tool
 
 ### Download
