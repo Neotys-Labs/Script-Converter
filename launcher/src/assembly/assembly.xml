@@ -14,7 +14,7 @@
             <directory>${project.build.directory}</directory>
             <outputDirectory>/</outputDirectory>
             <includes>
-                <include>script-converter-all.jar</include>
+                <include>converters-launcher-1.3.3-SNAPSHOT-all.jar</include>
             </includes>
         </fileSet>
     </fileSets>

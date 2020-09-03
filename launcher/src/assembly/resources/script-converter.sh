@@ -1,2 +1,2 @@
 #!/bin/sh
-java -jar script-converter-all.jar $*
+java -jar converters-launcher-1.3.3-SNAPSHOT-all.jar $*
