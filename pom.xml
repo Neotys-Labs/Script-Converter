@@ -16,7 +16,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<neoload-models.version>2.0.6</neoload-models.version>
 		<slf4j.version>1.7.25</slf4j.version>
-		<logback.classic.version>1.2.3</logback.classic.version>
+		<logback.classic.version>1.4.11</logback.classic.version>
 		<immutables.version>2.5.5</immutables.version>
 		<jacoco.version>0.7.7.201606060606</jacoco.version>
 	</properties>
